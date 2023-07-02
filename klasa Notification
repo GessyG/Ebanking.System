@@ -1,0 +1,31 @@
+import java.util.Date;
+
+public class Notification {
+    private String identifikuesiNjoftimit;
+    private User perdoruesiPranesues;
+    private String llojiNjoftimit;
+    private String permbajtjaNjoftimit;
+    private Date dataOraDergimit;
+
+    public Notification(String identifikuesiNjoftimit, User perdoruesiPranesues, String llojiNjoftimit, String permbajtjaNjoftimit) {
+        this.identifikuesiNjoftimit = identifikuesiNjoftimit;
+        this.perdoruesiPranesues = perdoruesiPranesues;
+        this.llojiNjoftimit = llojiNjoftimit;
+        this.permbajtjaNjoftimit = permbajtjaNjoftimit;
+        this.dataOraDergimit = new Date();
+    }
+
+    public void dergoNjoftim() {
+        // Logjika për dërgimin e njoftimeve te rëndësishme për përdoruesin
+    }
+
+    public String kontrolloStatusinNjoftimit() {
+        // Logjika për kontrollimin e statusit të njoftimit
+        // Kthe një status (lexuar, jo lexuar, dorëzuar, etj.)
+        return "Jo lexuar";
+    }
+
+    public void perditesoStatusinNjoftimit(String statusi) {
+        // Logjika për përditësimin e statusit të njoftimit
+    }
+}
