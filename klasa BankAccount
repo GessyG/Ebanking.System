@@ -1,0 +1,105 @@
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class BankAccount {
+    private String numriLlogarisë;
+    private String tipiLlogarisë;
+    private double balanca;
+    private Date dataHapjes;
+    private List<String> historiaTransaksioneve;
+    private String informacioneMbiMbulimin;
+
+    public BankAccount(String numriLlogarisë, String tipiLlogarisë, double balanca, Date dataHapjes, String informacioneMbiMbulimin) {
+        this.numriLlogarisë = numriLlogarisë;
+        this.tipiLlogarisë = tipiLlogarisë;
+        this.balanca = balanca;
+        this.dataHapjes = dataHapjes;
+        this.historiaTransaksioneve = new ArrayList<String>();
+        this.informacioneMbiMbulimin = informacioneMbiMbulimin;
+    }
+
+    public String getNumriLlogarisë() {
+        return numriLlogarisë;
+    }
+
+    public String getTipiLlogarisë() {
+        return tipiLlogarisë;
+    }
+
+    public double getBalanca() {
+        return balanca;
+    }
+
+    public Date getDataHapjes() {
+        return dataHapjes;
+    }
+
+    public List<String> getHistoriaTransaksioneve() {
+        return historiaTransaksioneve;
+    }
+
+    public String getInformacioneMbiMbulimin() {
+        return informacioneMbiMbulimin;
+    }
+
+    public void setNumriLlogarisë(String numriLlogarisë) {
+        this.numriLlogarisë = numriLlogarisë;
+    }
+
+    public void setTipiLlogarisë(String tipiLlogarisë) {
+        this.tipiLlogarisë = tipiLlogarisë;
+    }
+
+    public void setBalanca(double balanca) {
+        this.balanca = balanca;
+    }
+
+    public void setDataHapjes(Date dataHapjes) {
+        this.dataHapjes = dataHapjes;
+    }
+
+    public void setHistoriaTransaksioneve(List<String> historiaTransaksioneve) {
+        this.historiaTransaksioneve = historiaTransaksioneve;
+    }
+
+    public void setInformacioneMbiMbulimin(String informacioneMbiMbulimin) {
+        this.informacioneMbiMbulimin = informacioneMbiMbulimin;
+    }
+
+    // public void transferoFonde(double shuma, BankAccount llogariaPranuese) {
+        // Logjika për transferimin e fondeve nga kjo llogari në llogarinë pranuese
+    //}
+   //  metode ne chat.......TODO
+    public void transferoFonde(double shuma, BankAccount llogariaPranuese) {
+
+        double shumaEmbetur = balanca-shuma;
+       // Kontrollo disponueshmërinë e fondeve në llogarinë burimore
+       if (shuma > balanca) {
+           System.out.println("Fondet e disponueshme nuk janë të mjaftueshme.");
+       }else {
+
+           System.out.println("Shuma e mbetur pas transferit eshte:"+shumaEmbetur);
+       }
+
+
+   }
+    public List<String> shikoHistorineTransaksioneve() {
+        // Logjika për shikimin e historisë së transaksioneve
+        return historiaTransaksioneve;
+    }
+
+    public double kontrolloBilancin() {
+        // Logjika për kontrollin e bilancit
+        return balanca;
+    }
+
+    public void kërkesëPërKredi(double shuma) {
+        // Logjika për dërgimin e kërkesës për kredi
+    }
+
+    public void paguKreditën(double shuma) {
+        // Logjika për pagesën e kreditës
+    }
+}
