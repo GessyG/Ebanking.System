@@ -1,0 +1,29 @@
+public class PaymentGateway {
+    private String identifikuesiGateway;
+    private String informacioneGateway;
+    private String celesiPublik;
+    private String celesiPrivat;
+
+    public PaymentGateway(String identifikuesiGateway, String informacioneGateway, String celesiPublik, String celesiPrivat) {
+        this.identifikuesiGateway = identifikuesiGateway;
+        this.informacioneGateway = informacioneGateway;
+        this.celesiPublik = celesiPublik;
+        this.celesiPrivat = celesiPrivat;
+    }
+
+    public boolean verifikoPagesën(double shuma, String informacioneKarteKrediti) {
+        // Logjika për verifikimin e pagesës
+        // Kthe një boolean që tregon nëse pagesa është verifikuar ose jo
+        return true;
+    }
+
+    public boolean autorizoTransaksionin(String informacioneKarteKrediti, double shuma, String destinacioni) {
+        // Logjika për autorizimin e transaksionit
+        // Kthe një boolean që tregon nëse transaksioni është autorizuar ose jo
+        return true;
+    }
+
+    public void ruajTëDhënatEKartaveKrediti(String informacioneKarteKrediti) {
+        // Logjika për ruajtjen e të dhënave të kartave të kreditit
+    }
+}
