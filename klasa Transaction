@@ -1,0 +1,41 @@
+import java.util.Date;
+
+public class Transaction {
+    private String numriTransaksionit;
+    private BankAccount llogariaDërguesit;
+    private BankAccount llogariaPranuesit;
+    private double shumaTransferuar;
+    private Date dataOraTransaksionit;
+
+    public Transaction(String numriTransaksionit, BankAccount llogariaDërguesit, BankAccount llogariaPranuesit, double shumaTransferuar) {
+        this.numriTransaksionit = numriTransaksionit;
+        this.llogariaDërguesit = llogariaDërguesit;
+        this.llogariaPranuesit = llogariaPranuesit;
+        this.shumaTransferuar = shumaTransferuar;
+        this.dataOraTransaksionit = new Date();
+        
+    }
+
+    public Transaction(String number, int i, Object o) {
+    }
+
+    public void shfaqDetajetTransaksionit() {
+        System.out.println("Numri i transaksionit: " + numriTransaksionit);
+        System.out.println("Llogaria e dërguesit: " + llogariaDërguesit.getNumriLlogarisë());
+        System.out.println("Llogaria e pranuesit: " + llogariaPranuesit.getNumriLlogarisë());
+        System.out.println("Shuma e transferuar: " + shumaTransferuar);
+        System.out.println("Data dhe ora e transaksionit: " + dataOraTransaksionit);
+    }
+
+    public String verifikoStatusinTransaksionit() {
+        // Logjika për verifikimin e statusit të transaksionit
+        // Kthe një status (sukses, refuzuar, anuluar, etj.)
+        return "Sukses";
+    }
+
+    public static void main(String[] args) {
+      
+    }
+}
+
+    
