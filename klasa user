@@ -1,0 +1,50 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class User {
+    private String emri;
+    private String mbiemri;
+    private String adresa;
+    private String numriIdentifikimit;
+    private String emriPërdoruesit;
+    private String fjalekalimi;
+    private String email;
+    private String numriTelefonit;
+    private List<String> llogaritëBankare;
+
+    public User(String emri, String mbiemri, String adresa, String numriIdentifikimit, String emriPërdoruesit, String fjalekalimi, String email, String numriTelefonit) {
+        this.emri = emri;
+        this.mbiemri = mbiemri;
+        this.adresa = adresa;
+        this.numriIdentifikimit = numriIdentifikimit;
+        this.emriPërdoruesit = emriPërdoruesit;
+        this.fjalekalimi = fjalekalimi;
+        this.email = email;
+        this.numriTelefonit = numriTelefonit;
+        this.llogaritëBankare = new ArrayList<String>();
+    }
+
+    public void kyçuAplikacion() {
+        // Logjika për kyçjen në aplikacion
+    }
+
+    public void regjistroPërdoruesin() {
+        // Logjika për regjistrimin e përdoruesit
+    }
+
+    public void ndryshoTëDhënatPersonale(String emri, String mbiemri, String adresa, String numriTelefonit) {
+        this.emri = emri;
+        this.mbiemri = mbiemri;
+        this.adresa = adresa;
+        this.numriTelefonit = numriTelefonit;
+    }
+
+    public double kontrolloBilancin() {
+        // Logjika për kontrollin e bilancit
+        return 0.0;
+    }
+
+    public void transferoFonde(double shuma, String llogariaTransferuese, String llogariaPranuese) {
+        // Logjika për transferimin e fondeve
+    }
+}
